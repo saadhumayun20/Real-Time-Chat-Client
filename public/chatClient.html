@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat!</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Link to the CSS file in the 'public/css' directory -->
+</head>
+<body>
+    <div id="chat-container">
+        <div class="inputGroup">
+            <input type="text" id="username" required="" autocomplete="off">
+            <label for="username">Enter username</label>
+        </div>
+        <button id="connectBtn">Connect As</button>
+        <p id="connectStatus"></p>
+        <div id="chat-area" style="display:none">
+            <ul id="messages"></ul>
+            <form id="chatForm">
+                <input type="text" id="chatInput" placeholder="Type a message...">
+                <button type="submit" id="sendBtn">Send</button>
+                <button type="button" id="clearBtn">Clear Chat</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/eventListeners.js"></script> <!-- Link to the JavaScript file in the 'public/js' directory -->
+    <script src="/socket.io/socket.io.js"></script>
+</body>
+</html>
